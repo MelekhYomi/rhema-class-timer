@@ -1,0 +1,14 @@
+{
+  "version": "1.1.1",
+  "publishedAt": "2026-11-10T00:00:00Z",
+  "notes": "New Rhema Bible Training Center Nigeria emblem and spoken start/stop recording announcements on Android.",
+  "windows": {
+    "url": "https://github.com/OWNER/REPO/releases/latest/download/RhemaClassTimer-Setup-1.1.1.exe"
+  },
+  "android": {
+    "url": "https://github.com/OWNER/REPO/releases/latest/download/RhemaClassTimer-1.1.1.apk"
+  },
+  "web": {
+    "url": "https://github.com/OWNER/REPO/releases/latest"
+  }
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Rhema Class Timer</string>
+    <string name="title_activity_main">Rhema Class Timer</string>
+    <string name="package_name">ng.rhema.classtimer</string>
+    <string name="custom_url_scheme">ng.rhema.classtimer</string>
+</resources>

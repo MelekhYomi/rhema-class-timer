@@ -1,0 +1,74 @@
+{
+  "name": "rhema-class-timer",
+  "productName": "Rhema Class Timer",
+  "version": "1.1.1",
+  "description": "Rhema Nigeria class bell timer for web, Windows and Android",
+  "author": "Rhema Nigeria",
+  "private": true,
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "desktop": "vite build && electron .",
+    "dist:win": "vite build && electron-builder --win",
+    "dist:win-portable": "vite build && electron-builder --win portable",
+    "android:sync": "vite build && cap sync android && node scripts/android-setup.cjs",
+    "android:build": "npm run android:sync && node scripts/build-android.cjs",
+    "android:open": "cap open android"
+  },
+  "build": {
+    "appId": "ng.rhema.classtimer",
+    "productName": "Rhema Class Timer",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**",
+      "electron/**",
+      "build/icon-256.png"
+    ],
+    "win": {
+      "icon": "build/icon-256.png",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "Rhema Class Timer",
+      "artifactName": "RhemaClassTimer-Setup-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "RhemaClassTimer-Portable-${version}.${ext}"
+    }
+  },
+  "dependencies": {
+    "@capacitor-community/keep-awake": "^8.0.1",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/browser": "^8.0.5",
+    "@capacitor/core": "^8.5.3",
+    "@capacitor/local-notifications": "^8.3.1",
+    "@fontsource/poppins": "^5.3.0",
+    "@fontsource/roboto-mono": "^5.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-icons": "^5.7.0",
+    "react-toastify": "^11.1.0"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/cli": "^8.5.3",
+    "@vitejs/plugin-react": "^6.1.2",
+    "electron": "^45.0.0",
+    "electron-builder": "^26.18.0",
+    "vite": "^8.3.5"
+  }
+}
