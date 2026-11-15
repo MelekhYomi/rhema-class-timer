@@ -80,10 +80,12 @@ publishes a GitHub Release with:
 It also bakes this URL into both builds:
 
 ```
-https://github.com/<owner>/<repo>/releases/latest/download/updates.json
+https://github.com/MelekhYomi/rhema-class-timer/releases/latest/download/updates.json
 ```
 
-So push the folder to GitHub (branch `main`) and the release/update system works
+The repository for this project already lives at
+[github.com/MelekhYomi/rhema-class-timer](https://github.com/MelekhYomi/rhema-class-timer),
+so push the folder to GitHub (branch `main`) and the release/update system works
 with no server to maintain.
 
 ### Building locally with update checks
